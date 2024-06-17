@@ -1,16 +1,26 @@
+// app.js
+
 const express = require('express');
+const countriesRouter = require('./routes/countries');
+const racesRouter = require('./routes/races');
+const raceInfoRouter = require('./routes/raceInfo');
+const status = require('./routes/status')
+require('dotenv').config();
+
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-// Define a route
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+// Mount route modules
+app.use('/api/countries', countriesRouter);
+app.use('/api/races', racesRouter);
+app.use('/api/race-info', raceInfoRouter);
+app.use('/api/status', status);
+
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
 
-// Start the server
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
