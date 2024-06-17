@@ -1,0 +1,34 @@
+.hello-world {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh; /* Adjusted height to not take up the entire viewport */
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px; /* Added margin to separate from other content */
+}
+
+.letter {
+  display: inline-block;
+  animation: fadeInMove 2s ease-in-out infinite alternate, rainbow 2s linear infinite;
+}
+
+@keyframes fadeInMove {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  14% { color: orange; }
+  28% { color: yellow; }
+  42% { color: green; }
+  57% { color: blue; }
+  71% { color: indigo; }
+  85% { color: violet; }
+  100% { color: red; }
+}
