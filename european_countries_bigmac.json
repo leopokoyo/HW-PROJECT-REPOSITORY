@@ -1,0 +1,212 @@
+{"countries":[
+    {
+        "Country": "Germany",
+        "EmojiCode": "\ud83c\udde9\ud83c\uddea",
+        "MinimumWage": 1584,
+        "BigMacPrice": 4.99,
+        "BigMacsPerMonth": 317.0
+    },
+    {
+        "Country": "France",
+        "EmojiCode": "\ud83c\uddeb\ud83c\uddf7",
+        "MinimumWage": 1539,
+        "BigMacPrice": 4.5,
+        "BigMacsPerMonth": 342.0
+    },
+    {
+        "Country": "Spain",
+        "EmojiCode": "\ud83c\uddea\ud83c\uddf8",
+        "MinimumWage": 1108,
+        "BigMacPrice": 4.25,
+        "BigMacsPerMonth": 260.0
+    },
+    {
+        "Country": "Italy",
+        "EmojiCode": "\ud83c\uddee\ud83c\uddf9",
+        "MinimumWage": 0,
+        "BigMacPrice": 4.6,
+        "BigMacsPerMonth": 0
+    },
+    {
+        "Country": "United Kingdom",
+        "EmojiCode": "\ud83c\uddec\ud83c\udde7",
+        "MinimumWage": 1463,
+        "BigMacPrice": 3.99,
+        "BigMacsPerMonth": 366.0
+    },
+    {
+        "Country": "Netherlands",
+        "EmojiCode": "\ud83c\uddf3\ud83c\uddf1",
+        "MinimumWage": 0,
+        "BigMacPrice": 4.25,
+        "BigMacsPerMonth": 0
+    },
+    {
+        "Country": "Belgium",
+        "EmojiCode": "\ud83c\udde7\ud83c\uddea",
+        "MinimumWage": 1593,
+        "BigMacPrice": 4.5,
+        "BigMacsPerMonth": 354.0
+    },
+    {
+        "Country": "Sweden",
+        "EmojiCode": "\ud83c\uddf8\ud83c\uddea",
+        "MinimumWage": 0,
+        "BigMacPrice": 5.0,
+        "BigMacsPerMonth": 0
+    },
+    {
+        "Country": "Norway",
+        "EmojiCode": "\ud83c\uddf3\ud83c\uddf4",
+        "MinimumWage": 0,
+        "BigMacPrice": 6.5,
+        "BigMacsPerMonth": 0
+    },
+    {
+        "Country": "Denmark",
+        "EmojiCode": "\ud83c\udde9\ud83c\uddf0",
+        "MinimumWage": 0,
+        "BigMacPrice": 5.15,
+        "BigMacsPerMonth": 0
+    },
+    {
+        "Country": "Finland",
+        "EmojiCode": "\ud83c\uddeb\ud83c\uddee",
+        "MinimumWage": 0,
+        "BigMacPrice": 5.0,
+        "BigMacsPerMonth": 0
+    },
+    {
+        "Country": "Ireland",
+        "EmojiCode": "\ud83c\uddee\ud83c\uddea",
+        "MinimumWage": 1656,
+        "BigMacPrice": 4.75,
+        "BigMacsPerMonth": 348.0
+    },
+    {
+        "Country": "Austria",
+        "EmojiCode": "\ud83c\udde6\ud83c\uddf9",
+        "MinimumWage": 1500,
+        "BigMacPrice": 4.75,
+        "BigMacsPerMonth": 315.0
+    },
+    {
+        "Country": "Switzerland",
+        "EmojiCode": "\ud83c\udde8\ud83c\udded",
+        "MinimumWage": 0,
+        "BigMacPrice": 6.5,
+        "BigMacsPerMonth": 0
+    },
+    {
+        "Country": "Portugal",
+        "EmojiCode": "\ud83c\uddf5\ud83c\uddf9",
+        "MinimumWage": 775,
+        "BigMacPrice": 4.25,
+        "BigMacsPerMonth": 182.0
+    },
+    {
+        "Country": "Greece",
+        "EmojiCode": "\ud83c\uddec\ud83c\uddf7",
+        "MinimumWage": 758,
+        "BigMacPrice": 4.5,
+        "BigMacsPerMonth": 168.0
+    },
+    {
+        "Country": "Poland",
+        "EmojiCode": "\ud83c\uddf5\ud83c\uddf1",
+        "MinimumWage": 614,
+        "BigMacPrice": 2.99,
+        "BigMacsPerMonth": 205.0
+    },
+    {
+        "Country": "Czech Republic",
+        "EmojiCode": "\ud83c\udde8\ud83c\uddff",
+        "MinimumWage": 575,
+        "BigMacPrice": 3.49,
+        "BigMacsPerMonth": 164.0
+    },
+    {
+        "Country": "Hungary",
+        "EmojiCode": "\ud83c\udded\ud83c\uddfa",
+        "MinimumWage": 487,
+        "BigMacPrice": 3.15,
+        "BigMacsPerMonth": 154.0
+    },
+    {
+        "Country": "Slovakia",
+        "EmojiCode": "\ud83c\uddf8\ud83c\uddf0",
+        "MinimumWage": 580,
+        "BigMacPrice": 3.5,
+        "BigMacsPerMonth": 165.0
+    },
+    {
+        "Country": "Slovenia",
+        "EmojiCode": "\ud83c\uddf8\ud83c\uddee",
+        "MinimumWage": 940,
+        "BigMacPrice": 3.8,
+        "BigMacsPerMonth": 247.0
+    },
+    {
+        "Country": "Croatia",
+        "EmojiCode": "\ud83c\udded\ud83c\uddf7",
+        "MinimumWage": 546,
+        "BigMacPrice": 3.5,
+        "BigMacsPerMonth": 156.0
+    },
+    {
+        "Country": "Bulgaria",
+        "EmojiCode": "\ud83c\udde7\ud83c\uddec",
+        "MinimumWage": 332,
+        "BigMacPrice": 2.6,
+        "BigMacsPerMonth": 127.0
+    },
+    {
+        "Country": "Romania",
+        "EmojiCode": "\ud83c\uddf7\ud83c\uddf4",
+        "MinimumWage": 466,
+        "BigMacPrice": 2.9,
+        "BigMacsPerMonth": 160.0
+    },
+    {
+        "Country": "Estonia",
+        "EmojiCode": "\ud83c\uddea\ud83c\uddea",
+        "MinimumWage": 584,
+        "BigMacPrice": 3.2,
+        "BigMacsPerMonth": 182.0
+    },
+    {
+        "Country": "Latvia",
+        "EmojiCode": "\ud83c\uddf1\ud83c\uddfb",
+        "MinimumWage": 500,
+        "BigMacPrice": 3.1,
+        "BigMacsPerMonth": 161.0
+    },
+    {
+        "Country": "Lithuania",
+        "EmojiCode": "\ud83c\uddf1\ud83c\uddf9",
+        "MinimumWage": 607,
+        "BigMacPrice": 3.0,
+        "BigMacsPerMonth": 202.0
+    },
+    {
+        "Country": "Luxembourg",
+        "EmojiCode": "\ud83c\uddf1\ud83c\uddfa",
+        "MinimumWage": 2141,
+        "BigMacPrice": 4.8,
+        "BigMacsPerMonth": 446.0
+    },
+    {
+        "Country": "Malta",
+        "EmojiCode": "\ud83c\uddf2\ud83c\uddf9",
+        "MinimumWage": 777,
+        "BigMacPrice": 4.5,
+        "BigMacsPerMonth": 172.0
+    },
+    {
+        "Country": "Cyprus",
+        "EmojiCode": "\ud83c\udde8\ud83c\uddfe",
+        "MinimumWage": 870,
+        "BigMacPrice": 4.75,
+        "BigMacsPerMonth": 183.0
+    }
+]}

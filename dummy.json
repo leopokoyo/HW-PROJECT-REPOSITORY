@@ -1,34 +1,49 @@
-{
-  "users": [
-    { "id": 1, "name": "John Doe" },
-    { "id": 2, "name": "Jane Smith" },
-    { "id": 3, "name": "John Smith" },
-    { "id": 4, "name": "Jane Doe" },
-    { "id": 5, "name": "John Johnson" },
-    { "id": 6, "name": "Jane Johnson" },
-    { "id": 7, "name": "John Brown" },
-    { "id": 8, "name": "Jane Brown" },
-    { "id": 9, "name": "John White" },
-    { "id": 10, "name": "Jane White" },
-    { "id": 11, "name": "John Black" },
-    { "id": 12, "name": "Jane Black" },
-    { "id": 13, "name": "John Green" },
-    { "id": 14, "name": "Jane Green" },
-    { "id": 15, "name": "John Blue" },
-    { "id": 16, "name": "Jane Blue" },
-    { "id": 17, "name": "John Red" },
-    { "id": 18, "name": "Jane Red" },
-    { "id": 19, "name": "John Yellow" },
-    { "id": 20, "name": "Jane Yellow" },
-    { "id": 21, "name": "John Purple" },
-    { "id": 22, "name": "Jane Purple" },
-    { "id": 23, "name": "John Orange" },
-    { "id": 24, "name": "Jane Orange" },
-    { "id": 25, "name": "John Pink" },
-    { "id": 26, "name": "Jane Pink" },
-    { "id": 27, "name": "John Gray" },
-    { "id": 28, "name": "Jane Gray" },
-    { "id": 29, "name": "John Silver" },
-    { "id": 30, "name": "Jane Silver" }
-  ]
-}
+UPDATE big_mac_data.countries SET emoticon_code = '🇳🇿' WHERE name = 'New Zealand';
+UPDATE big_mac_data.countries SET emoticon_code = '🇦🇷' WHERE name = 'Argentina';
+UPDATE big_mac_data.countries SET emoticon_code = '🇦🇺' WHERE name = 'Australia';
+UPDATE big_mac_data.countries SET emoticon_code = '🇬🇧' WHERE name = 'United Kingdom';
+UPDATE big_mac_data.countries SET emoticon_code = '🇱🇺' WHERE name = 'Luxembourg';
+UPDATE big_mac_data.countries SET emoticon_code = '🇩🇪' WHERE name = 'Germany';
+UPDATE big_mac_data.countries SET emoticon_code = '🇮🇪' WHERE name = 'Ireland';
+UPDATE big_mac_data.countries SET emoticon_code = '🇹🇼' WHERE name = 'Taiwan';
+UPDATE big_mac_data.countries SET emoticon_code = '🇳🇱' WHERE name = 'Netherlands';
+UPDATE big_mac_data.countries SET emoticon_code = '🇯🇵' WHERE name = 'Japan';
+UPDATE big_mac_data.countries SET emoticon_code = '🇨🇦' WHERE name = 'Canada';
+UPDATE big_mac_data.countries SET emoticon_code = '🇺🇸' WHERE name = 'United States';
+UPDATE big_mac_data.countries SET emoticon_code = '🇧🇪' WHERE name = 'Belgium';
+UPDATE big_mac_data.countries SET emoticon_code = '🇨🇭' WHERE name = 'Switzerland';
+UPDATE big_mac_data.countries SET emoticon_code = '🇸🇪' WHERE name = 'Sweden';
+UPDATE big_mac_data.countries SET emoticon_code = '🇩🇰' WHERE name = 'Denmark';
+UPDATE big_mac_data.countries SET emoticon_code = '🇫🇷' WHERE name = 'France';
+UPDATE big_mac_data.countries SET emoticon_code = '🇵🇱' WHERE name = 'Poland';
+UPDATE big_mac_data.countries SET emoticon_code = '🇰🇷' WHERE name = 'South Korea';
+UPDATE big_mac_data.countries SET emoticon_code = '🇸🇬' WHERE name = 'Singapore';
+UPDATE big_mac_data.countries SET emoticon_code = '🇨🇿' WHERE name = 'Czech Republic';
+UPDATE big_mac_data.countries SET emoticon_code = '🇪🇸' WHERE name = 'Spain';
+UPDATE big_mac_data.countries SET emoticon_code = '🇧🇷' WHERE name = 'Brazil';
+UPDATE big_mac_data.countries SET emoticon_code = '🇳🇴' WHERE name = 'Norway';
+UPDATE big_mac_data.countries SET emoticon_code = '🇮🇹' WHERE name = 'Italy';
+UPDATE big_mac_data.countries SET emoticon_code = '🇮🇳' WHERE name = 'India';
+UPDATE big_mac_data.countries SET emoticon_code = '🇲🇽' WHERE name = 'Mexico';
+UPDATE big_mac_data.countries SET emoticon_code = '🇹🇷' WHERE name = 'Turkey';
+UPDATE big_mac_data.countries SET emoticon_code = '🇭🇺' WHERE name = 'Hungary';
+UPDATE big_mac_data.countries SET emoticon_code = '🇸🇰' WHERE name = 'Slovakia';
+UPDATE big_mac_data.countries SET emoticon_code = '🇸🇮' WHERE name = 'Slovenia';
+UPDATE big_mac_data.countries SET emoticon_code = '🇲🇾' WHERE name = 'Malaysia';
+UPDATE big_mac_data.countries SET emoticon_code = '🇵🇹' WHERE name = 'Portugal';
+UPDATE big_mac_data.countries SET emoticon_code = '🇿🇦' WHERE name = 'South Africa';
+UPDATE big_mac_data.countries SET emoticon_code = '🇷🇴' WHERE name = 'Romania';
+UPDATE big_mac_data.countries SET emoticon_code = '🇭🇷' WHERE name = 'Croatia';
+UPDATE big_mac_data.countries SET emoticon_code = '🇷🇺' WHERE name = 'Russia';
+UPDATE big_mac_data.countries SET emoticon_code = '🇭🇰' WHERE name = 'Hong Kong';
+UPDATE big_mac_data.countries SET emoticon_code = '🇮🇩' WHERE name = 'Indonesia';
+UPDATE big_mac_data.countries SET emoticon_code = '🇺🇾' WHERE name = 'Uruguay';
+UPDATE big_mac_data.countries SET emoticon_code = '🇨🇴' WHERE name = 'Colombia';
+UPDATE big_mac_data.countries SET emoticon_code = '🇵🇭' WHERE name = 'Philippines';
+UPDATE big_mac_data.countries SET emoticon_code = '🇪🇪' WHERE name = 'Estonia';
+UPDATE big_mac_data.countries SET emoticon_code = '🇱🇹' WHERE name = 'Lithuania';
+UPDATE big_mac_data.countries SET emoticon_code = '🇱🇻' WHERE name = 'Latvia';
+UPDATE big_mac_data.countries SET emoticon_code = '🇨🇱' WHERE name = 'Chile';
+UPDATE big_mac_data.countries SET emoticon_code = '🇵🇪' WHERE name = 'Peru';
+UPDATE big_mac_data.countries SET emoticon_code = '🇹🇭' WHERE name = 'Thailand';
+UPDATE big_mac_data.countries SET emoticon_code = '🇻🇳' WHERE name = 'Vietnam';

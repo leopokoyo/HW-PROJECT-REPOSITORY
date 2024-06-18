@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh; /* Adjusted height to not take up the entire viewport */
+  height: 5vh; /* Adjusted height to not take up the entire viewport */
   font-size: 3em;
   font-weight: bold;
   margin-bottom: 20px; /* Added margin to separate from other content */
@@ -10,7 +10,7 @@
 
 .letter {
   display: inline-block;
-  animation: fadeInMove 2s ease-in-out infinite alternate, rainbow 2s linear infinite;
+  animation: fadeInMove 500ms ease-in-out infinite alternate, rainbow 2s linear infinite;
 }
 
 @keyframes fadeInMove {

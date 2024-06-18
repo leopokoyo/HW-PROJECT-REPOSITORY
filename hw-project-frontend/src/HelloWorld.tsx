@@ -2,7 +2,7 @@ import React from 'react';
 import './css/HelloWorld.css';
 
 const HelloWorld: React.FC = () => {
-  const text = "Hello_World";
+  const text = "BigMacIndex";
   return (
     <div className="hello-world">
       {text.split('').map((letter, index) => (
