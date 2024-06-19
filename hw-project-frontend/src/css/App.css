@@ -1,52 +1,70 @@
-body {
-  background-color: #282c34;
-  color: white;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+/* App.css */
+body, html {
+  height: 100%;
+  margin-top: 0px; /* Added margin-top */
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
 }
 
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.country-grid {
+  width: 100%;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.country-button {
+  width: 100px;
+  height: 90px;
+  font-size: 10px;
+  border-radius: 80px;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.country-button:hover {
+  transform: scale(1.1);
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.country-info {
+  animation: fadeIn 0.5s ease forwards;
+  width: 100%;
+  margin-top: 20px; /* Added margin-top */
+  max-width: 600px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn-warning {
+  background-color: #ffcc00;
+  border: none;
+  font-size: 1.2em;
+}
+
+.btn-warning:hover {
+  background-color: #ffa500;
 }
 
 h1 {
-  margin-bottom: 10px;
-}
-
-
-.data-container {
-  margin-top: 20px;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #3a3f47;
-  border-radius: 8px;
-}
-
-.input-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-button {
-  padding: 10px;
-  font-size: 1em;
-  cursor: pointer;
-  background-color: #4bb1b1;
-  border: none;
-  border-radius: 4px;
-  color: #ede8f3;
-}
-
-button:hover {
-  background-color: #105380;
+  font-size: 2em;
+  margin-bottom: 200px;
 }
