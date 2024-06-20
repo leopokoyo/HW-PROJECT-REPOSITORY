@@ -13,23 +13,28 @@ router.get('/', async (req, res) => {
         res.json(races);
     } catch (error) {
         console.error('Error fetching races:', error);
-        res.status(500).json({ message: 'Internal server error' });
+        res.status(500).json({message: 'Internal server error'});
     }
 });
 
 router.get('/test', async (req, res) => {
     try {
-        const races = await db.any('SELECT * FROM big_mac_data.races r WHERE r.type = $1', ['Test']);
+        const races = await db.any(
+            `
+                SELECT * 
+                FROM big_mac_data.races r 
+                WHERE r.type = $1
+            `, ['Test']);
 
         res.json(races);
     } catch (error) {
         console.error('Error fetching races:', error);
-        res.status(500).json({ message: 'Internal server error' });
+        res.status(500).json({message: 'Internal server error'});
     }
 });
 
-router.post('/:c1/:c2/:c3/:c4', async (req, res) => {
-    const { c1, c2, c3, c4 } = req.params;
+router.post('/:c1/:c2/:c3/:c4/', async (req, res) => {
+    const {c1, c2, c3, c4} = req.params;
 
     try {
         await db.tx(async t => {
@@ -39,24 +44,35 @@ router.post('/:c1/:c2/:c3/:c4', async (req, res) => {
             const newRaceId = lastRaceResult ? parseInt(lastRaceResult.id) + 1 : 1;
 
             // Insert a new race into the races table
-            const insertRaceQuery = `
-                INSERT INTO big_mac_data.races (id, p1, p2, p3, p4, type)
-                VALUES ($1, $2, $3, $4, $5, $6)
-            `;
-            await t.none(insertRaceQuery, [newRaceId, c1, c2, c3, c4, 'Test']); // Adjust type if needed
+            const insertRaceQuery =
+                `
+                    INSERT INTO big_mac_data.races (id, p1, p2, p3, p4, type)
+                    VALUES
+                    ((SELECT rid FROM big_mac_data.temp_participants LIMIT (1)), 
+                    $1, 
+                    $2, 
+                    $3, 
+                    $4, 
+                    $5)
+                `;
+            await t.none(insertRaceQuery, [c1, c2, c3, c4, 'Test']); // Adjust type if needed
 
             // Insert participants into the participates table
             const insertParticipatesQuery = `
                 INSERT INTO big_mac_data.participates (cid, rid, place)
-                VALUES ($1, $2, 1), ($3, $4, 2), ($5, $6, 3), ($7, $8, 4)
+                VALUES 
+                ($1, (SELECT rid FROM big_mac_data.temp_participants LIMIT (1)), 1), 
+                ($3, (SELECT rid FROM big_mac_data.temp_participants LIMIT (1)), 2), 
+                ($5, (SELECT rid FROM big_mac_data.temp_participants LIMIT (1)), 3), 
+                ($7, (SELECT rid FROM big_mac_data.temp_participants LIMIT (1)), 4)
             `;
             await t.none(insertParticipatesQuery, [c1, newRaceId, c2, newRaceId, c3, newRaceId, c4, newRaceId]);
         });
 
-        res.status(201).json({ message: 'Race and participants inserted successfully' });
+        res.status(201).json({message: 'Race and participants inserted successfully'});
     } catch (error) {
         console.error('Error in the inserting process:', error);
-        res.status(500).json({ message: 'Internal Server Error' });
+        res.status(500).json({message: 'Internal Server Error'});
     }
 });
 
