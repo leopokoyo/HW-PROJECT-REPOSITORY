@@ -3,6 +3,8 @@ const countriesRouter = require('./routes/countries');
 const racesRouter = require('./routes/races');
 const raceInfoRouter = require('./routes/raceInfo');
 const statusRouter = require('./routes/status');
+const tempRouter = require('./routes/temp')
+
 const cors = require('cors');
 require('dotenv').config();
 
@@ -18,6 +20,7 @@ app.use('/api/countries', countriesRouter);
 app.use('/api/races', racesRouter);
 app.use('/api/race-info', raceInfoRouter);
 app.use('/api/status', statusRouter);
+app.use('/api/temp', tempRouter)
 
 // Start server
 app.listen(PORT, () => {
