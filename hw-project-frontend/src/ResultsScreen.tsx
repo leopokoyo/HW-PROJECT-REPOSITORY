@@ -1,4 +1,5 @@
 import React from 'react';
+import withFadeTransition from './withFadeTransition';
 
 interface RaceResult {
   id: string;
@@ -44,4 +45,4 @@ const ResultsScreen: React.FC<Props> = ({
   );
 };
 
-export default ResultsScreen;
+export default withFadeTransition(ResultsScreen);

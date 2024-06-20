@@ -1,43 +1,39 @@
 import React from 'react';
+import { FaShoppingCart } from 'react-icons/fa'; // Import the shopping cart icon
+import { Country, Player } from './types'; // Make sure to define types in a separate file or inline
 
-interface Country {
-  id: string;
-  name: string;
-  avg_income: string;
-  bm_price: string;
-  nr_monthly_bm: string;
-  emoticon_code: string | null;
-}
-
-interface Player {
-  id: number;
-  name: string;
-  color: string;
-}
-
-interface Props {
+interface CountrySelectionProps {
   countries: Country[];
   selectedCountries: { [key: string]: number };
-  players: Player[];
-  currentPlayer: Player;
-  allPlayersSelected: boolean;
-  handleSelectCountry: (country: Country) => void;
-  handleConfirmSelection: () => void;
-  error: string | null;
+  availablePlayers: number[];
+  onSelectCountry: (country: Country) => void;
+  onConfirmSelection: () => void;
   getEmojiForCountry: (countryId: number) => string | null;
+  getCountryNameById: (countryId: string) => string;
+  error: string | null;
 }
 
-const CountrySelection: React.FC<Props> = ({
+const players: Player[] = [
+  { id: 0, name: 'Player 1', color: 'primary' },
+  { id: 1, name: 'Player 2', color: 'danger' },
+  { id: 2, name: 'Player 3', color: 'success' },
+  { id: 3, name: 'Player 4', color: 'warning' },
+];
+
+const CountrySelection: React.FC<CountrySelectionProps> = ({
   countries,
   selectedCountries,
-  players,
-  currentPlayer,
-  allPlayersSelected,
-  handleSelectCountry,
-  handleConfirmSelection,
-  error,
+  availablePlayers,
+  onSelectCountry,
+  onConfirmSelection,
   getEmojiForCountry,
+  getCountryNameById,
+  error,
 }) => {
+  console.log("Rendering CountrySelection with countries:", countries);
+  const currentPlayerIndex = availablePlayers[0];
+  const currentPlayer = players[currentPlayerIndex];
+  const allPlayersSelected = availablePlayers.length === 0;
 
   return (
     <div className="country-grid-kiosk container d-flex flex-column justify-content-center align-items-center min-vh-100">
@@ -61,7 +57,7 @@ const CountrySelection: React.FC<Props> = ({
             <div key={index} className="col">
               <button
                 className={`country-button btn btn-${buttonColor} rounded-circle`}
-                onClick={() => !allPlayersSelected || selectedPlayerIndex !== undefined ? handleSelectCountry(country) : null}
+                onClick={() => !allPlayersSelected || selectedPlayerIndex !== undefined ? onSelectCountry(country) : null}
                 disabled={allPlayersSelected && selectedPlayerIndex === undefined}
               >
                 <span className="country-emoji">{emoji || country.name.slice(0, 2)}</span>
@@ -72,8 +68,8 @@ const CountrySelection: React.FC<Props> = ({
         })}
       </div>
       {allPlayersSelected && (
-        <button className="orderButton" onClick={handleConfirmSelection}>
-          Order Now
+        <button className="orderButton" onClick={onConfirmSelection}>
+          <FaShoppingCart /> View Cart
         </button>
       )}
     </div>

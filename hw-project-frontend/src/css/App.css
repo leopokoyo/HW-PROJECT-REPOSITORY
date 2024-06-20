@@ -1,10 +1,29 @@
 body {
   font-family: "Twemoji Country Flags", "Helvetica", "Comic Sans", serif;
   background-color: #f8f9fa; /* Light background */
+  background-image: url('../assets/background.png'); /* Path to your image */
+  background-repeat: repeat;
+  background-size: 200px 200px; /* Adjust size as needed */
+  background-position: 0 0, 100px 100px; /* Offset to create the brick effect */
+  animation: moveBackground 10s linear infinite;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0, 100px 100px;
+  }
+  100% {
+    background-position: 100px 100px, 200px 200px;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
 }
 
 h2 {
@@ -35,15 +54,24 @@ h2 {
 }
 
 .country-button:hover {
-  transform: scale(1.1); /* Enlarge the button slightly on hover */
   background-color: #ffc107; /* Change background color on hover (optional) */
   color: white;
+  animation: scale 0.5s ;
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .country-emoji {
   display: inline-block;
   font-family: "Twemoji Country Flags", "Helvetica", "Comic Sans", serif;
-  font-size: 3rem; /* Make emojis really big! */
+  font-size: 5rem; /* Make emojis really big! */
 }
 
 .country-name {
@@ -74,7 +102,8 @@ h2 {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 10%;
+  height:15%;
+  font-size: 55px;
   display: flex; /* Enable flexbox */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -91,15 +120,15 @@ h2 {
   color: #ffffff; /* White color */
   top: 0;
   width: 100%;
-  height: 10%;
+  height: 15%;
   display: flex; /* Enable flexbox */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   background-color: #ffc107; /* Match the background color */
-  padding: 1rem 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
   font-weight: 400; /* Make the title less bold */
+  font-size: 10px;
 }
 
 .loading-screen, .results-screen {
@@ -132,4 +161,31 @@ h2 {
 
 .results-screen .btn {
   font-size: 2rem;
+}
+
+/* Add these styles for fade transitions */
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

@@ -1,0 +1,113 @@
+.betting-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Increase the gap between sliders */
+  width: 100%; /* Ensure the container is full width */
+
+}
+
+.slider {
+  height: 150px;
+
+}
+
+.slider.player1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Increase the gap between sliders */
+  width: 500px; /* Ensure the container is full width */
+}
+
+.slider.player2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Increase the gap between sliders */
+  width: 80%; /* Ensure the container is full width */
+  accent-color: red;
+}
+
+.slider.player3 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Increase the gap between sliders */
+  width: 80%; /* Ensure the container is full width */
+  accent-color: green;
+}
+
+.slider.player4 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Increase the gap between sliders */
+  width: 80%; /* Ensure the container is full width */
+  accent-color: #ffc107;
+}
+
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.bet-amount {
+  font-size: 2rem; /* Make the text bigger */
+  font-weight: bold;
+  color: #333;
+  background: #eee;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 120px; /* Increase the width */
+  text-align: center;
+  vertical-align: middle;
+}
+
+.orderButton {
+  background-color: #ffc107;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  width: 95%;
+  height: 10%;
+  font-size: 3rem;
+  color: white;
+  z-index: 1000;
+  font-family: "Twemoji Country Flags","Verdana", sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.player-info {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.player-name {
+  font-size: 1.7rem;
+  width: 100px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: -3px;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.shake {
+  animation: shake 0.2s linear infinite; /* Linear timing function for no easing */
+}
