@@ -1,70 +1,135 @@
-/* App.css */
-body, html {
-  height: 100%;
-  margin-top: 0px; /* Added margin-top */
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-}
-
-.App {
+body {
+  font-family: "Twemoji Country Flags", "Helvetica", "Comic Sans", serif;
+  background-color: #f8f9fa; /* Light background */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100%;
-  padding: 20px;
+  align-items: center;
+  margin: 0;
 }
 
-.country-grid {
-  width: 100%;
-  margin-left: 70px;
+h2 {
+  font-family: "Twemoji Country Flags", "Verdana", "Helvetica", "Comic Sans", serif;
+  font-weight: bold;
+}
+
+.country-grid-kiosk {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
+  padding: 10rem 0 10rem 0; /* Add padding to the top to avoid content being hidden by the fixed title */
 }
 
 .country-button {
-  width: 100px;
-  height: 90px;
-  font-size: 10px;
-  border-radius: 80px;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  width: 8rem;
+  height: 8rem;
+  font-size: 2.5rem; /* Make the font size larger */
+  border: none; /* Remove default button border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.2s ease; /* Add a smooth transition for the hover effect */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Ensure text is centered */
+  margin: 0 auto; /* Center the button within the column */
 }
 
 .country-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Enlarge the button slightly on hover */
+  background-color: #ffc107; /* Change background color on hover (optional) */
+  color: white;
+}
+
+.country-emoji {
+  display: inline-block;
+  font-family: "Twemoji Country Flags", "Helvetica", "Comic Sans", serif;
+  font-size: 3rem; /* Make emojis really big! */
+}
+
+.country-name {
+  font-weight: bold;
+  text-align: center; /* Center the text */
+  margin-top: 0.5rem; /* Add some spacing above the country name */
+  width: 100%; /* Ensure the text takes up the full width for centering */
+  padding-right: 20px;
+}
+
+.orderButton {
   background-color: #ffc107;
-  color: #fff;
-}
-
-.country-info {
-  animation: fadeIn 0.5s ease forwards;
-  width: 100%;
-  margin-top: 20px; /* Added margin-top */
-  max-width: 600px;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.btn-warning {
-  background-color: #ffcc00;
   border: none;
-  font-size: 1.2em;
+  position: fixed;
+  bottom: 20px;
+  width: 95%;
+  height: 10%;
+  font-size: 3rem;
+  color: white;
+  z-index: 1000;
+  font-family: "Twemoji Country Flags","Verdana", sans-serif; /* Change the font family to Verdana */
+  text-align:center;
+  vertical-align:middle;
+  padding: 0;
 }
 
-.btn-warning:hover {
-  background-color: #ffa500;
+.Title {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: rgba(255, 255, 255, 0.96); /* Match the background color */
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  font-weight: 400; /* Make the title less bold */
+  font-family: "Twemoji Country Flags","Verdana", sans-serif; /* Change the font family to Verdana */
 }
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 200px;
+.TitleResult {
+  position: fixed;
+  color: #ffffff; /* White color */
+  top: 0;
+  width: 100%;
+  height: 10%;
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #ffc107; /* Match the background color */
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  font-weight: 400; /* Make the title less bold */
+}
+
+.loading-screen, .results-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh;
+}
+
+.results-screen .result-item {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.spinner-border {
+  width: 5rem;
+  height: 5rem;
+}
+
+.results-screen h1, .loading-screen h1 {
+  font-size: 3rem;
+  color: #ffffff; /* Change to white */
+}
+
+.results-screen h2 {
+  font-size: 2.5rem;
+  color: #000;
+}
+
+.results-screen .btn {
+  font-size: 2rem;
 }
