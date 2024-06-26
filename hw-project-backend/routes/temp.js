@@ -25,16 +25,50 @@ module.exports = router;
 
 router.get('/participants/', async (req, res) => {
     try {
-        const countries_data = await db.any(
-            `
-            SELECT c.id, c.nr_monthly_bm 
-            FROM big_mac_data.countries c, big_mac_data.temp_participants t 
-            WHERE c.id = t.p1 OR c.id = t.p2 OR c.id = t.p3 OR c.id = t.p4
-        `);
-        res.json(countries_data);
+        // Query to get participants' country ids
+        const participantsQuery = `
+            SELECT p1, p2, p3, p4 
+            FROM big_mac_data.temp_participants 
+            ORDER BY rid DESC LIMIT 1
+        `;
+        const participants = await db.oneOrNone(participantsQuery);
+
+        if (!participants) {
+            return res.status(404).json({ message: 'No participants data found' });
+        }
+
+        // Extract the country ids
+        const { p1, p2, p3, p4 } = participants;
+
+        // Query to get the country data for each participant
+        const countriesDataQuery = `
+            SELECT c1.id AS p1_id, c1.nr_monthly_bm AS p1_nr_monthly_bm,
+                   c2.id AS p2_id, c2.nr_monthly_bm AS p2_nr_monthly_bm,
+                   c3.id AS p3_id, c3.nr_monthly_bm AS p3_nr_monthly_bm,
+                   c4.id AS p4_id, c4.nr_monthly_bm AS p4_nr_monthly_bm
+            FROM big_mac_data.countries c1
+            LEFT JOIN big_mac_data.countries c2 ON c2.id = $2
+            LEFT JOIN big_mac_data.countries c3 ON c3.id = $3
+            LEFT JOIN big_mac_data.countries c4 ON c4.id = $4
+            WHERE c1.id = $1
+        `;
+        const countriesData = await db.oneOrNone(countriesDataQuery, [p1, p2, p3, p4]);
+
+        if (!countriesData) {
+            return res.status(404).json({ message: 'No countries data found' });
+        }
+
+        const result = [
+            { id: countriesData.p1_id, nr_monthly_bm: countriesData.p1_nr_monthly_bm },
+            { id: countriesData.p2_id, nr_monthly_bm: countriesData.p2_nr_monthly_bm },
+            { id: countriesData.p3_id, nr_monthly_bm: countriesData.p3_nr_monthly_bm },
+            { id: countriesData.p4_id, nr_monthly_bm: countriesData.p4_nr_monthly_bm }
+        ];
+
+        res.json(result);
     } catch (error) {
         console.error('Error fetching countries data:', error);
-        res.status(500).json({message: 'Internal server error'});
+        res.status(500).json({ message: 'Internal server error' });
     }
 });
 
@@ -228,7 +262,5 @@ router.get('/bet-summary', async (req, res) => {
         res.status(500).json({ message: 'Internal Server Error' });
     }
 });
-
-module.exports = router;
 
 module.exports = router;
